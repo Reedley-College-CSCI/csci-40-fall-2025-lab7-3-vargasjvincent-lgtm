@@ -19,7 +19,7 @@ double findAverage(const ???);
 
 int main() {
     // TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
-    
+    TemperatureRecord(MAX_DAYS);
     int size = 0;  // Actual number of records read
 
     // TODO: Step 3 - Call readTemperatures() to load data from file
