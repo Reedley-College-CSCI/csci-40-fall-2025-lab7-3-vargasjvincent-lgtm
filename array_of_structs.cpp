@@ -15,7 +15,7 @@ void readTemperatures(TemperatureRecord array[], int size); // TODO: Fix the par
 void printTemperatures(const int MAX_DAYS , TemperatureRecord records[]);
 //TemperatureRecord findMin(const ???);
 //TemperatureRecord findMax(const ???);
-//double findAverage(const ???);
+double findAverage(const int MAX_DAYS, TemperatureRecord records[]);
 
 int main() {
     // TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
@@ -28,7 +28,8 @@ int main() {
     // TODO: Step 4 - Print the temperatures
     printTemperatures(MAX_DAYS, records);
     // TODO: Step 5 - Compute and display min, max, and average temperature
-
+    
+    cout << "The average is: " << findAverage(MAX_DAYS, records);
     return 0;
 }
 
@@ -67,3 +68,11 @@ void printTemperatures(const int MAX_DAYS, TemperatureRecord records[]) {
 
 // TODO: Step 10 - Implement findAverage()
 // Compute and return the average temperature
+double findAverage(const int MAX_DAYS, TemperatureRecord records[]) {
+    double sum = 0.0;
+    for (int i = 0; i < MAX_DAYS; i++) {
+        sum = sum + records[i].temperature;
+    }
+    return sum / MAX_DAYS;
+}
+
